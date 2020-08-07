@@ -14,5 +14,12 @@ docker run --rm blairy/curl
 ###### Add to "$HOME/.bashrc" to make alias permanent.
 
 #### Example Commands:
- - docker run --rm blairy/curl -V
+```
+docker run --rm blairy/curl -V
 
+
+curl 7.72.0-DEV (x86_64-pc-linux-musl) libcurl/7.72.0-DEV OpenSSL/1.1.1g
+Release-Date: [unreleased]
+Protocols: dict file ftp ftps gopher http https imap imaps pop3 pop3s rtsp smb smbs smtp smtps telnet tftp 
+Features: AsynchDNS HTTPS-proxy IPv6 Largefile NTLM NTLM_WB SSL TLS-SRP UnixSockets
+```
