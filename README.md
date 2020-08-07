@@ -16,8 +16,14 @@ docker run --rm blairy/curl
 #### Example Commands:
 ```
 docker run --rm blairy/curl -V
+docker run --rm blairy/curl -k -L https://google.com
+docker run --rm blairy/curl -u "DOMAIN\login:password" smb://fs/dir/path/file.ext > 1
+docker run --rm blairy/curl --user name:passwd ftps://ftp.host.com/
+```
 
 
+##### Version Information:
+```
 curl 7.72.0-DEV (x86_64-pc-linux-musl) libcurl/7.72.0-DEV OpenSSL/1.1.1g
 Release-Date: [unreleased]
 Protocols: dict file ftp ftps gopher http https imap imaps pop3 pop3s rtsp smb smbs smtp smtps telnet tftp 
