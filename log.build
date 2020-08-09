@@ -8609,3 +8609,31 @@ Successfully tagged blairy/curl:20200810_024423
 20200810_024424 - Build completed successfully.
 
 
+[master b24382c] Automatic build 20200810_024423
+ 1 file changed, 62 insertions(+)
+20200810_024430 - git completed successfully.
+The push refers to repository [docker.io/blairy/curl]
+e2bb31939235: Preparing
+405e3135c403: Preparing
+db3f55569c18: Preparing
+46aa4ff8fb8d: Preparing
+eaf2380f097a: Preparing
+84324633dde5: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+b343ddcee16c: Waiting
+50644c29ef5a: Waiting
+84324633dde5: Waiting
+405e3135c403: Layer already exists
+46aa4ff8fb8d: Layer already exists
+e2bb31939235: Layer already exists
+eaf2380f097a: Layer already exists
+db3f55569c18: Layer already exists
+50644c29ef5a: Layer already exists
+84324633dde5: Layer already exists
+b343ddcee16c: Layer already exists
+20200810_024423: digest: sha256:944c48ff0949447b82b72eaaf59fea63b5e644047f71d68a309f6160bb54e3f7 size: 2007
+20200810_024437 - Docker push completed successfully.
+
+
+20200810_024437 - All completed successfully
