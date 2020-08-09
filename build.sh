@@ -40,7 +40,6 @@ else
 fi
 
 
-
 # Push to github - Triggers builds in github and Dockerhub.
 # TODO: Make this a function and add better exception management.. 
 # only run this if the SSH function is successful.
