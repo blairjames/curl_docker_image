@@ -68265,3 +68265,66 @@ Successfully tagged blairy/curl:20200927_233801
 
 
 Already up to date.
+[master 2d350b6] Automatic build 20200927_233801
+ 1 file changed, 63 insertions(+)
+20200927_233811 - git completed successfully.
+The push refers to repository [docker.io/blairy/curl]
+e2bb31939235: Preparing
+405e3135c403: Preparing
+db3f55569c18: Preparing
+46aa4ff8fb8d: Preparing
+eaf2380f097a: Preparing
+84324633dde5: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+84324633dde5: Waiting
+b343ddcee16c: Waiting
+50644c29ef5a: Waiting
+db3f55569c18: Layer already exists
+e2bb31939235: Layer already exists
+405e3135c403: Layer already exists
+46aa4ff8fb8d: Layer already exists
+eaf2380f097a: Layer already exists
+84324633dde5: Layer already exists
+50644c29ef5a: Layer already exists
+b343ddcee16c: Layer already exists
+20200927_233801: digest: sha256:944c48ff0949447b82b72eaaf59fea63b5e644047f71d68a309f6160bb54e3f7 size: 2007
+20200927_233821 - Docker push completed successfully.
+
+
+20200927_233821 - All completed successfully
+20200928_003801 - Starting Build.
+
+Sending build context to Docker daemon  70.66MB
+Step 1/9 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/9 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/9 : RUN apk add --no-cache     make automake git gdbm gdbm-dev util-linux gcc openldap openldap-clients     nghttp2 libc-dev openssl-dev libc-utils autoconf libtool rsyslog-gssapi libpsl
+ ---> Using cache
+ ---> 338b7d11bc5d
+Step 4/9 : RUN git clone https://github.com/curl/curl.git
+ ---> Using cache
+ ---> a76d950d9e49
+Step 5/9 : RUN cd /curl && ./buildconf
+ ---> Using cache
+ ---> 8d3e6e86ceb6
+Step 6/9 : RUN cd /curl && ./configure --with-zlib -with-gssapi --enable-ldap --enable-ldaps     --with-libpsl --with-nghttp2
+ ---> Using cache
+ ---> a6f1b97c3609
+Step 7/9 : RUN cd /curl && ls -larth && make -j 8 -l 90
+ ---> Using cache
+ ---> ac3a2a77ed6a
+Step 8/9 : RUN cd /curl && make -j 8 -l 90 install
+ ---> Using cache
+ ---> 7b540c355d27
+Step 9/9 : ENTRYPOINT ["/usr/local/bin/curl"]
+ ---> Using cache
+ ---> 89fffdd6b395
+Successfully built 89fffdd6b395
+Successfully tagged blairy/curl:20200928_003801
+20200928_003802 - Build completed successfully.
+
+
+Already up to date.
