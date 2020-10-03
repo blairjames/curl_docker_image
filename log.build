@@ -77159,3 +77159,1425 @@ Successfully tagged blairy/curl:20201003_223801
 
 
 Already up to date.
+[master 612ceb3] Automatic build 20201003_223801
+ 1 file changed, 63 insertions(+)
+20201003_223812 - git completed successfully.
+The push refers to repository [docker.io/blairy/curl]
+e2bb31939235: Preparing
+405e3135c403: Preparing
+db3f55569c18: Preparing
+46aa4ff8fb8d: Preparing
+eaf2380f097a: Preparing
+84324633dde5: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+84324633dde5: Waiting
+b343ddcee16c: Waiting
+50644c29ef5a: Waiting
+46aa4ff8fb8d: Layer already exists
+405e3135c403: Layer already exists
+e2bb31939235: Layer already exists
+eaf2380f097a: Layer already exists
+db3f55569c18: Layer already exists
+b343ddcee16c: Layer already exists
+84324633dde5: Layer already exists
+50644c29ef5a: Layer already exists
+20201003_223801: digest: sha256:944c48ff0949447b82b72eaaf59fea63b5e644047f71d68a309f6160bb54e3f7 size: 2007
+20201003_223820 - Docker push completed successfully.
+
+
+20201003_223820 - All completed successfully
+20201003_225412 - Starting Build.
+
+Sending build context to Docker daemon  89.07MB
+Step 1/4 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/4 : RUN apk update && apk upgrade &&     apk add --no-cache     make automake git gdbm gdbm-dev util-linux gcc openldap openldap-clients     nghttp2 libc-dev openssl-dev libc-utils autoconf libtool rsyslog-gssapi libpsl
+ ---> Running in 9c7bd8470494
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/community/x86_64/APKINDEX.tar.gz
+v3.12.0-362-g9ed1b5bb6e [http://dl-cdn.alpinelinux.org/alpine/v3.12/main]
+v3.12.0-363-g816c1f5e1b [http://dl-cdn.alpinelinux.org/alpine/v3.12/community]
+OK: 12750 distinct packages available
+(1/6) Upgrading musl (1.1.24-r8 -> 1.1.24-r9)
+(2/6) Upgrading busybox (1.31.1-r16 -> 1.31.1-r19)
+Executing busybox-1.31.1-r19.post-upgrade
+(3/6) Upgrading alpine-baselayout (3.2.0-r6 -> 3.2.0-r7)
+Executing alpine-baselayout-3.2.0-r7.pre-upgrade
+Executing alpine-baselayout-3.2.0-r7.post-upgrade
+(4/6) Upgrading ca-certificates-bundle (20191127-r2 -> 20191127-r4)
+(5/6) Upgrading ssl_client (1.31.1-r16 -> 1.31.1-r19)
+(6/6) Upgrading musl-utils (1.1.24-r8 -> 1.1.24-r9)
+Executing busybox-1.31.1-r19.trigger
+OK: 6 MiB in 14 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/community/x86_64/APKINDEX.tar.gz
+(1/73) Installing m4 (1.4.18-r1)
+(2/73) Installing libbz2 (1.0.8-r1)
+(3/73) Installing perl (5.30.3-r0)
+(4/73) Installing autoconf (2.69-r2)
+(5/73) Installing automake (1.16.2-r0)
+(6/73) Installing libgcc (9.3.0-r2)
+(7/73) Installing libstdc++ (9.3.0-r2)
+(8/73) Installing binutils (2.34-r1)
+(9/73) Installing gmp (6.2.0-r0)
+(10/73) Installing isl (0.18-r0)
+(11/73) Installing libgomp (9.3.0-r2)
+(12/73) Installing libatomic (9.3.0-r2)
+(13/73) Installing libgphobos (9.3.0-r2)
+(14/73) Installing mpfr4 (4.0.2-r4)
+(15/73) Installing mpc1 (1.1.0-r1)
+(16/73) Installing gcc (9.3.0-r2)
+(17/73) Installing gdbm (1.13-r1)
+(18/73) Installing gdbm-dev (1.13-r1)
+(19/73) Installing ca-certificates (20191127-r4)
+(20/73) Installing nghttp2-libs (1.41.0-r0)
+(21/73) Installing libcurl (7.69.1-r1)
+(22/73) Installing expat (2.2.9-r1)
+(23/73) Installing pcre2 (10.35-r0)
+(24/73) Installing git (2.26.2-r0)
+(25/73) Installing perl-error (0.17029-r0)
+(26/73) Installing perl-git (2.26.2-r0)
+(27/73) Installing git-perl (2.26.2-r0)
+(28/73) Installing musl-dev (1.1.24-r9)
+(29/73) Installing libc-dev (0.7.2-r3)
+(30/73) Installing libunistring (0.9.10-r0)
+(31/73) Installing libidn2 (2.3.0-r0)
+(32/73) Installing libpsl (0.21.0-r1)
+(33/73) Installing ncurses-terminfo-base (6.2_p20200523-r0)
+(34/73) Installing ncurses-libs (6.2_p20200523-r0)
+(35/73) Installing readline (8.0.4-r0)
+(36/73) Installing bash (5.0.17-r0)
+Executing bash-5.0.17-r0.post-install
+(37/73) Installing libltdl (2.4.6-r7)
+(38/73) Installing libtool (2.4.6-r7)
+(39/73) Installing make (4.3-r0)
+(40/73) Installing c-ares (1.16.1-r0)
+(41/73) Installing libev (4.33-r0)
+(42/73) Installing nghttp2 (1.41.0-r0)
+(43/73) Installing db (5.3.28-r1)
+(44/73) Installing libsasl (2.1.27-r6)
+(45/73) Installing libldap (2.4.50-r0)
+(46/73) Installing libuuid (2.35.2-r0)
+(47/73) Installing openldap (2.4.50-r0)
+Executing openldap-2.4.50-r0.pre-install
+Executing openldap-2.4.50-r0.post-install
+[91m*
+* To use LDAP server, you have to install some backend. Most users would need MDB
+* backend which you can install with: apk add openldap-back-mdb.
+*
+* If you use overlays, you have to install them separately too:
+* apk add openldap-overlay-<name>, or openldap-overlay-all to install them all.
+*
+[0m(48/73) Installing openldap-clients (2.4.50-r0)
+(49/73) Installing pkgconf (1.7.2-r0)
+(50/73) Installing openssl-dev (1.1.1g-r0)
+(51/73) Installing libestr (0.1.11-r1)
+(52/73) Installing libfastjson (0.99.8-r2)
+(53/73) Installing rsyslog (8.2004.0-r0)
+(54/73) Installing krb5-conf (1.0-r2)
+(55/73) Installing libcom_err (1.45.6-r0)
+(56/73) Installing keyutils-libs (1.6.1-r1)
+(57/73) Installing libverto (0.3.1-r1)
+(58/73) Installing krb5-libs (1.18.2-r0)
+(59/73) Installing rsyslog-gssapi (8.2004.0-r0)
+(60/73) Installing libblkid (2.35.2-r0)
+(61/73) Installing blkid (2.35.2-r0)
+(62/73) Installing libcap-ng (0.7.10-r1)
+(63/73) Installing setpriv (2.35.2-r0)
+(64/73) Installing libmount (2.35.2-r0)
+(65/73) Installing libsmartcols (2.35.2-r0)
+(66/73) Installing findmnt (2.35.2-r0)
+(67/73) Installing mcookie (2.35.2-r0)
+(68/73) Installing hexdump (2.35.2-r0)
+(69/73) Installing lsblk (2.35.2-r0)
+(70/73) Installing libfdisk (2.35.2-r0)
+(71/73) Installing sfdisk (2.35.2-r0)
+(72/73) Installing cfdisk (2.35.2-r0)
+(73/73) Installing util-linux (2.35.2-r0)
+Executing busybox-1.31.1-r19.trigger
+Executing ca-certificates-20191127-r4.trigger
+OK: 220 MiB in 87 packages
+Removing intermediate container 9c7bd8470494
+ ---> 2ac0517b795e
+Step 3/4 : RUN git clone https://github.com/curl/curl.git &&     cd /curl && ./buildconf &&     ./configure --with-zlib -with-gssapi --enable-ldap --enable-ldaps     --with-libpsl --with-nghttp2 &&     ls -larth && make -j 8 -l 90 &&     make -j 8 -l 90 install
+ ---> Running in fcdc7b08f3e1
+[91mCloning into 'curl'...
+[0m[91m*** Do not use buildconf. Instead, just use: autoreconf -fi
+[0mlibtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+libtoolize: Remember to add 'LT_INIT' to configure.ac.
+[91mconfigure.ac:120: installing './compile'
+[0m[91mconfigure.ac:180: installing './config.guess'
+[0m[91mconfigure.ac:180: installing './config.sub'
+[0m[91mconfigure.ac:120: installing './install-sh'
+[0m[91mconfigure.ac:125: installing './missing'
+[0m[91mdocs/examples/Makefile.am: installing './depcomp'
+[0m[91mparallel-tests: installing './test-driver'
+[0mchecking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports nested variables... yes
+checking whether to enable debug build options... no
+checking whether to enable compiler optimizer... (assumed) yes
+checking whether to enable strict compiler warnings... no
+checking whether to enable compiler warnings as errors... no
+checking whether to enable curl debug memory tracking... no
+checking whether to enable hiding of library internal symbols... yes
+checking whether to enable c-ares for DNS lookups... no
+checking whether to disable dependency on -lrt... (assumed no)
+checking whether to enable ECH support... no
+checking for path separator... :
+checking for sed... /bin/sed
+checking for grep... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ar... /usr/bin/ar
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking how to run the C preprocessor... gcc -E
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for code coverage support... no
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking curl version... 7.73.0-DEV
+checking build system type... x86_64-pc-linux-musl
+checking host system type... x86_64-pc-linux-musl
+checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for egrep... /bin/grep -E
+checking if OS is AIX (to define _ALL_SOURCE)... no
+checking if _THREAD_SAFE is already defined... no
+checking if _THREAD_SAFE is actually needed... no
+checking if _THREAD_SAFE is onwards defined... no
+checking if _REENTRANT is already defined... no
+checking if _REENTRANT is actually needed... no
+checking if _REENTRANT is onwards defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-pc-linux-musl file names to x86_64-pc-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+[91m./configure: line 1: /usr/bin/file: not found
+[0mchecking for mt... no
+checking if : is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether to build shared libraries with -version-info... yes
+checking whether to build shared libraries with -no-undefined... no
+checking whether to build shared libraries with -mimpure-text... no
+checking whether to build shared libraries with PIC... yes
+checking whether to build static libraries with PIC... yes
+checking whether to build shared libraries only... no
+checking whether to build static libraries only... no
+checking for inline... inline
+checking if cpp -P is needed... yes
+checking if cpp -P works... yes
+checking if compiler is DEC/Compaq/HP C... no
+checking if compiler is HP-UX C... no
+checking if compiler is IBM C... no
+checking if compiler is Intel C... no
+checking if compiler is clang... no
+checking if compiler is GNU C... yes
+checking if compiler is LCC... no
+checking if compiler is SGI MIPSpro C... no
+checking if compiler is SGI MIPS C... no
+checking if compiler is SunPro C... no
+checking if compiler is Tiny C... no
+checking if compiler is Watcom C... no
+checking if compiler accepts some basic options... yes
+configure: compiler options added: -Werror-implicit-function-declaration 
+checking if compiler accepts debug disabling options... yes
+configure: compiler options added: 
+checking if compiler optimizer assumed setting might be used... yes
+checking if compiler accepts optimizer enabling options... yes
+configure: compiler options added: -O2
+checking if compiler accepts strict warning options... yes
+configure: compiler options added: -Wno-system-headers 
+checking if compiler halts on compilation errors... yes
+checking if compiler halts on negative sized arrays... yes
+checking if compiler halts on function prototype mismatch... yes
+checking if compiler supports hiding library internal symbols... yes
+checking for windows.h... no
+checking whether build target is a native Windows one... no
+checking whether build target supports WIN32 file API... no
+checking for good-to-use Mac CFLAGS... no
+checking to see if the compiler supports __builtin_available()... no
+checking whether to support http... yes
+checking whether to support ftp... yes
+checking whether to support file... yes
+checking whether to support ldap... yes
+checking whether to support ldaps... yes
+checking whether to support rtsp... yes
+checking whether to support proxies... yes
+checking whether to support dict... yes
+checking whether to support telnet... yes
+checking whether to support tftp... yes
+checking whether to support pop3... yes
+checking whether to support imap... yes
+checking whether to support smb... yes
+checking whether to support smtp... yes
+checking whether to support gopher... yes
+checking whether to support mqtt... no
+checking whether to provide built-in manual... yes
+checking whether to enable generation of C code... yes
+checking whether to use libgcc... no
+checking if X/Open network library is required... no
+checking for gethostbyname... yes
+checking for windows.h... (cached) no
+checking for winsock.h... (cached) no
+checking for winsock2.h... (cached) no
+checking for proto/bsdsocket.h... no
+checking for connect in libraries... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/types.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for monotonic clock_gettime... yes
+checking for clock_gettime in libraries... no additional lib required
+checking if monotonic clock_gettime works... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking for zlib options with pkg-config... no
+checking for inflateEnd in -lz... no
+checking zlib.h usability... no
+checking zlib.h presence... no
+checking for zlib.h... no
+checking for BrotliDecoderDecompress in -lbrotlidec... no
+checking brotli/decode.h usability... no
+checking brotli/decode.h presence... no
+checking for brotli/decode.h... no
+checking for ZSTD_createDStream in -lzstd... no
+checking zstd.h usability... no
+checking zstd.h presence... no
+checking for zstd.h... no
+checking for lber.h... no
+checking for ldap.h... no
+checking for ldapssl.h... no
+checking for ldap_ssl.h... no
+checking for LDAP libraries... [91mconfigure: WARNING: Cannot find libraries for LDAP support: LDAP disabled
+[0mcannot find LDAP libraries
+checking whether to enable IPv6... yes
+checking if struct sockaddr_in6 has sin6_scope_id member... yes
+checking if argv can be written to... yes
+checking if GSS-API support is requested... yes
+checking gss.h usability... no
+checking gss.h presence... no
+checking for gss.h... no
+checking gssapi/gssapi.h usability... no
+checking gssapi/gssapi.h presence... no
+checking for gssapi/gssapi.h... no
+checking for gssapi/gssapi_generic.h... no
+checking for gssapi/gssapi_krb5.h... no
+checking gssapi.h usability... no
+checking gssapi.h presence... no
+checking for gssapi.h... no
+[91mconfigure: WARNING: disabling GSS-API support since no header files were found
+[0mchecking whether to enable Windows native SSL/TLS (Windows native builds only)... no
+checking whether to enable Secure Transport... no
+checking whether to enable Amiga native SSL/TLS (AmiSSL)... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for openssl options with pkg-config... found
+configure: pkg-config: SSL_LIBS: "-lssl -lcrypto "
+configure: pkg-config: SSL_LDFLAGS: ""
+configure: pkg-config: SSL_CPPFLAGS: ""
+checking for HMAC_Update in -lcrypto... yes
+checking for SSL_connect in -lssl... yes
+checking openssl/x509.h usability... yes
+checking openssl/x509.h presence... yes
+checking for openssl/x509.h... yes
+checking openssl/rsa.h usability... yes
+checking openssl/rsa.h presence... yes
+checking for openssl/rsa.h... yes
+checking openssl/crypto.h usability... yes
+checking openssl/crypto.h presence... yes
+checking for openssl/crypto.h... yes
+checking openssl/pem.h usability... yes
+checking openssl/pem.h presence... yes
+checking for openssl/pem.h... yes
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking openssl/err.h usability... yes
+checking openssl/err.h presence... yes
+checking for openssl/err.h... yes
+checking for RAND_egd... no
+checking for SSLv2_client_method... no
+checking for OpenSSL_version... yes
+checking for BoringSSL... no
+checking for libressl... no
+checking for OpenSSL >= v3... no
+checking for OpenSSL headers version... 1.1.1 - 0x1010107fL
+checking for OpenSSL library version... 1.1.1
+checking for OpenSSL headers and library versions matching... yes
+checking for "/dev/urandom"... yes
+checking for SRP_Calc_client_key in -lcrypto... yes
+configure: built with one SSL backend
+checking default CA cert bundle/path... /etc/ssl/certs/ca-certificates.crt
+checking whether to use builtin CA store of SSL library... no
+checking for library containing psl_builtin... [91mconfigure: WARNING: libpsl was not found
+[0mno
+checking for RTMP_Init in -lrtmp... no
+checking whether versioned symbols are wanted... no
+checking whether to enable Windows native IDN (Windows native builds only)... no
+checking whether to build with libidn2... (assumed) yes
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for libidn2 options with pkg-config... no
+configure: IDN_LIBS: "-lidn2"
+configure: IDN_LDFLAGS: ""
+configure: IDN_CPPFLAGS: ""
+configure: IDN_DIR: ""
+checking if idn2_lookup_ul can be linked... no
+checking idn2.h usability... no
+checking idn2.h presence... no
+checking for idn2.h... no
+[91mconfigure: WARNING: Cannot find libraries for IDN support: IDN disabled
+[0mchecking for pkg-config... (cached) /usr/bin/pkg-config
+checking for libnghttp2 options with pkg-config... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for libngtcp2 options with pkg-config... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for quiche options with pkg-config... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for fish options with pkg-config... no
+checking for ANSI C header files... (cached) yes
+checking for malloc.h... yes
+checking for memory.h... no
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/uio.h... yes
+checking for assert.h... yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for arpa/inet.h... yes
+checking for net/if.h... yes
+checking for netinet/in.h... yes
+checking for netinet/in6.h... no
+checking for sys/un.h... yes
+checking for linux/tcp.h... no
+checking for netinet/tcp.h... yes
+checking for netdb.h... yes
+checking for sys/sockio.h... no
+checking for sys/stat.h... (cached) yes
+checking for sys/param.h... yes
+checking for termios.h... yes
+checking for termio.h... no
+checking for sgtty.h... no
+checking for fcntl.h... yes
+checking for alloca.h... yes
+checking for time.h... (cached) yes
+checking for io.h... no
+checking for pwd.h... yes
+checking for utime.h... yes
+checking for sys/utime.h... no
+checking for sys/poll.h... yes
+checking for poll.h... yes
+checking for socket.h... no
+checking for sys/resource.h... yes
+checking for libgen.h... yes
+checking for locale.h... yes
+checking for errno.h... yes
+checking for stdbool.h... yes
+checking for arpa/tftp.h... yes
+checking for sys/filio.h... no
+checking for sys/wait.h... yes
+checking for setjmp.h... yes
+checking for an ANSI C-conforming const... yes
+checking for compiler support of C99 variadic macro style... yes
+checking for compiler support of old gcc variadic macro style... yes
+checking for size_t... yes
+checking whether time.h and sys/time.h may both be included... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for time.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for struct timeval... yes
+checking run-time libs availability... fine
+checking size of size_t... 8
+checking size of long... 8
+checking size of int... 4
+checking size of short... 2
+checking size of time_t... 8
+checking size of off_t... 8
+checking size of curl_off_t... 8
+checking for long long... yes
+checking if numberLL works... yes
+checking for ssize_t... yes
+checking for bool... yes
+checking for sa_family_t... yes
+checking for suseconds_t... yes
+checking if time_t is unsigned... no
+checking for sys/types.h... (cached) yes
+checking for poll.h... (cached) yes
+checking for sys/poll.h... (cached) yes
+checking for in_addr_t... yes
+checking for struct sockaddr_storage... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for sig_atomic_t... yes
+checking if sig_atomic_t is already defined as volatile... no
+checking return type of signal handlers... void
+checking for sys/select.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for select... yes
+checking types of args and return type for select... int,fd_set *,struct timeval *,int
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for recv... yes
+checking types of args and return type for recv... int,void *,size_t,int,ssize_t
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for send... yes
+checking types of args and return type for send... int,const void *,size_t,int,ssize_t
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for MSG_NOSIGNAL... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking if alarm can be linked... yes
+checking if alarm is prototyped... yes
+checking if alarm is compilable... yes
+checking if alarm usage allowed... yes
+checking if alarm might be used... yes
+checking for sys/types.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for libgen.h... (cached) yes
+checking if basename can be linked... yes
+checking if basename is prototyped... yes
+checking if basename is compilable... yes
+checking if basename usage allowed... yes
+checking if basename might be used... yes
+checking for sys/types.h... (cached) yes
+checking for socket.h... (cached) no
+checking if closesocket can be linked... no
+checking if closesocket might be used... no
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking if CloseSocket can be linked... no
+checking if CloseSocket might be used... no
+checking if connect can be linked... yes
+checking if connect is prototyped... yes
+checking if connect is compilable... yes
+checking if connect usage allowed... yes
+checking if connect might be used... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for fcntl.h... (cached) yes
+checking if fcntl can be linked... yes
+checking if fcntl is prototyped... yes
+checking if fcntl is compilable... yes
+checking if fcntl usage allowed... yes
+checking if fcntl might be used... yes
+checking if fcntl O_NONBLOCK is compilable... yes
+checking if fcntl O_NONBLOCK usage allowed... yes
+checking if fcntl O_NONBLOCK might be used... yes
+checking for windows.h... (cached) no
+checking for winsock2.h... (cached) no
+checking for ws2tcpip.h... (cached) no
+checking for sys/types.h... (cached) yes
+checking for netdb.h... (cached) yes
+checking if freeaddrinfo can be linked... yes
+checking if freeaddrinfo is prototyped... yes
+checking if freeaddrinfo is compilable... yes
+checking if freeaddrinfo usage allowed... yes
+checking if freeaddrinfo might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for ifaddrs.h... yes
+checking if freeifaddrs can be linked... yes
+checking if freeifaddrs is prototyped... yes
+checking if freeifaddrs is compilable... yes
+checking if freeifaddrs usage allowed... yes
+checking if freeifaddrs might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/xattr.h... yes
+checking if fsetxattr can be linked... yes
+checking if fsetxattr is prototyped... yes
+checking if fsetxattr takes 5 args.... yes
+checking if fsetxattr is compilable... yes
+checking if fsetxattr usage allowed... yes
+checking if fsetxattr might be used... yes
+checking if ftruncate can be linked... yes
+checking if ftruncate is prototyped... yes
+checking if ftruncate is compilable... yes
+checking if ftruncate usage allowed... yes
+checking if ftruncate might be used... yes
+checking for sys/types.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking if getaddrinfo can be linked... yes
+checking if getaddrinfo is prototyped... yes
+checking if getaddrinfo is compilable... yes
+checking if getaddrinfo seems to work... yes
+checking if getaddrinfo usage allowed... yes
+checking if getaddrinfo might be used... yes
+checking if getaddrinfo is threadsafe... yes
+checking if gai_strerror can be linked... yes
+checking if gai_strerror is prototyped... yes
+checking if gai_strerror is compilable... yes
+checking if gai_strerror usage allowed... yes
+checking if gai_strerror might be used... yes
+checking if gethostbyaddr can be linked... yes
+checking if gethostbyaddr is prototyped... yes
+checking if gethostbyaddr is compilable... yes
+checking if gethostbyaddr usage allowed... yes
+checking if gethostbyaddr might be used... yes
+checking if gethostbyaddr_r can be linked... yes
+checking if gethostbyaddr_r is prototyped... yes
+checking if gethostbyaddr_r takes 5 args.... no
+checking if gethostbyaddr_r takes 7 args.... no
+checking if gethostbyaddr_r takes 8 args.... yes
+checking if gethostbyaddr_r is compilable... yes
+checking if gethostbyaddr_r usage allowed... yes
+checking if gethostbyaddr_r might be used... yes
+checking if gethostbyname can be linked... yes
+checking if gethostbyname is prototyped... yes
+checking if gethostbyname is compilable... yes
+checking if gethostbyname usage allowed... yes
+checking if gethostbyname might be used... yes
+checking if gethostbyname_r can be linked... yes
+checking if gethostbyname_r is prototyped... yes
+checking if gethostbyname_r takes 3 args.... no
+checking if gethostbyname_r takes 5 args.... no
+checking if gethostbyname_r takes 6 args.... yes
+checking if gethostbyname_r is compilable... yes
+checking if gethostbyname_r usage allowed... yes
+checking if gethostbyname_r might be used... yes
+checking if gethostname can be linked... yes
+checking if gethostname is prototyped... yes
+checking if gethostname is compilable... yes
+checking for gethostname arg 2 data type... size_t
+checking if gethostname usage allowed... yes
+checking if gethostname might be used... yes
+checking if getpeername can be linked... yes
+checking if getpeername is prototyped... yes
+checking if getpeername is compilable... yes
+checking if getpeername usage allowed... yes
+checking if getpeername might be used... yes
+checking if getsockname can be linked... yes
+checking if getsockname is prototyped... yes
+checking if getsockname is compilable... yes
+checking if getsockname usage allowed... yes
+checking if getsockname might be used... yes
+checking for net/if.h... (cached) yes
+checking if if_nametoindex can be linked... yes
+checking if if_nametoindex is prototyped... yes
+checking if if_nametoindex is compilable... yes
+checking if if_nametoindex usage allowed... yes
+checking if if_nametoindex might be used... yes
+checking if getifaddrs can be linked... yes
+checking if getifaddrs is prototyped... yes
+checking if getifaddrs is compilable... yes
+checking if getifaddrs seems to work... yes
+checking if getifaddrs usage allowed... yes
+checking if getifaddrs might be used... yes
+checking if getservbyport_r can be linked... yes
+checking if getservbyport_r is prototyped... yes
+checking if getservbyport_r takes 4 args.... no
+checking if getservbyport_r takes 5 args.... no
+checking if getservbyport_r takes 6 args.... yes
+checking if getservbyport_r is compilable... yes
+checking if getservbyport_r usage allowed... yes
+checking if getservbyport_r might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for time.h... (cached) yes
+checking if gmtime_r can be linked... yes
+checking if gmtime_r is prototyped... yes
+checking if gmtime_r is compilable... yes
+checking if gmtime_r seems to work... yes
+checking if gmtime_r usage allowed... yes
+checking if gmtime_r might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for arpa/inet.h... (cached) yes
+checking if inet_ntoa_r can be linked... no
+checking if inet_ntoa_r might be used... no
+checking if inet_ntop can be linked... yes
+checking if inet_ntop is prototyped... yes
+checking if inet_ntop is compilable... yes
+checking if inet_ntop seems to work... yes
+checking if inet_ntop usage allowed... yes
+checking if inet_ntop might be used... yes
+checking if inet_pton can be linked... yes
+checking if inet_pton is prototyped... yes
+checking if inet_pton is compilable... yes
+checking if inet_pton seems to work... yes
+checking if inet_pton usage allowed... yes
+checking if inet_pton might be used... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for sys/ioctl.h... (cached) yes
+checking for stropts.h... yes
+checking if ioctl can be linked... yes
+checking if ioctl is prototyped... yes
+checking if ioctl is compilable... yes
+checking if ioctl usage allowed... yes
+checking if ioctl might be used... yes
+checking if ioctl FIONBIO is compilable... yes
+checking if ioctl FIONBIO usage allowed... yes
+checking if ioctl FIONBIO might be used... yes
+checking if ioctl SIOCGIFADDR is compilable... yes
+checking if ioctl SIOCGIFADDR usage allowed... yes
+checking if ioctl SIOCGIFADDR might be used... yes
+checking if ioctlsocket can be linked... no
+checking if ioctlsocket might be used... no
+checking if IoctlSocket can be linked... no
+checking if IoctlSocket might be used... no
+checking if localtime_r can be linked... yes
+checking if localtime_r is prototyped... yes
+checking if localtime_r is compilable... yes
+checking if localtime_r seems to work... yes
+checking if localtime_r usage allowed... yes
+checking if localtime_r might be used... yes
+checking if memrchr can be linked... yes
+checking if memrchr is prototyped... no
+checking if memrchr might be used... no
+checking if poll can be linked... yes
+checking if poll is prototyped... yes
+checking if poll is compilable... yes
+checking if poll seems to work... yes
+checking if poll usage allowed... yes
+checking if poll might be used... yes
+checking if setsockopt can be linked... yes
+checking if setsockopt is prototyped... yes
+checking if setsockopt is compilable... yes
+checking if setsockopt usage allowed... yes
+checking if setsockopt might be used... yes
+checking if setsockopt SO_NONBLOCK is compilable... no
+checking if setsockopt SO_NONBLOCK might be used... no
+checking for sys/types.h... (cached) yes
+checking for signal.h... (cached) yes
+checking if sigaction can be linked... yes
+checking if sigaction is prototyped... yes
+checking if sigaction is compilable... yes
+checking if sigaction usage allowed... yes
+checking if sigaction might be used... yes
+checking if siginterrupt can be linked... yes
+checking if siginterrupt is prototyped... yes
+checking if siginterrupt is compilable... yes
+checking if siginterrupt usage allowed... yes
+checking if siginterrupt might be used... yes
+checking if signal can be linked... yes
+checking if signal is prototyped... yes
+checking if signal is compilable... yes
+checking if signal usage allowed... yes
+checking if signal might be used... yes
+checking for sys/types.h... (cached) yes
+checking for setjmp.h... (cached) yes
+checking if sigsetjmp can be linked... yes
+checking if sigsetjmp is prototyped... yes
+checking if sigsetjmp is compilable... yes
+checking if sigsetjmp usage allowed... yes
+checking if sigsetjmp might be used... yes
+checking if socket can be linked... yes
+checking if socket is prototyped... yes
+checking if socket is compilable... yes
+checking if socket usage allowed... yes
+checking if socket might be used... yes
+checking if socketpair can be linked... yes
+checking if socketpair is prototyped... yes
+checking if socketpair is compilable... yes
+checking if socketpair usage allowed... yes
+checking if socketpair might be used... yes
+checking if strcasecmp can be linked... yes
+checking if strcasecmp is prototyped... yes
+checking if strcasecmp is compilable... yes
+checking if strcasecmp usage allowed... yes
+checking if strcasecmp might be used... yes
+checking if strcmpi can be linked... no
+checking if strcmpi might be used... no
+checking if strdup can be linked... yes
+checking if strdup is prototyped... yes
+checking if strdup is compilable... yes
+checking if strdup usage allowed... yes
+checking if strdup might be used... yes
+checking if strerror_r can be linked... yes
+checking if strerror_r is prototyped... yes
+checking if strerror_r is compilable... yes
+checking if strerror_r is glibc like... no
+checking if strerror_r is POSIX like... yes
+checking if strerror_r seems to work... yes
+checking if strerror_r usage allowed... yes
+checking if strerror_r might be used... yes
+checking if stricmp can be linked... no
+checking if stricmp might be used... no
+checking if strncasecmp can be linked... yes
+checking if strncasecmp is prototyped... yes
+checking if strncasecmp is compilable... yes
+checking if strncasecmp usage allowed... yes
+checking if strncasecmp might be used... yes
+checking if strncmpi can be linked... no
+checking if strncmpi might be used... no
+checking if strnicmp can be linked... no
+checking if strnicmp might be used... no
+checking if strstr can be linked... yes
+checking if strstr is prototyped... yes
+checking if strstr is compilable... yes
+checking if strstr usage allowed... yes
+checking if strstr might be used... yes
+checking if strtok_r can be linked... yes
+checking if strtok_r is prototyped... yes
+checking if strtok_r is compilable... yes
+checking if strtok_r usage allowed... yes
+checking if strtok_r might be used... yes
+checking if strtoll can be linked... yes
+checking if strtoll is prototyped... yes
+checking if strtoll is compilable... yes
+checking if strtoll usage allowed... yes
+checking if strtoll might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/uio.h... (cached) yes
+checking if writev can be linked... yes
+checking if writev is prototyped... yes
+checking if writev is compilable... yes
+checking if writev usage allowed... yes
+checking if writev might be used... yes
+checking whether getpwuid_r is declared... yes
+checking for fnmatch... yes
+checking for geteuid... yes
+checking for getpass_r... no
+checking deeper for getpass_r... but still no
+checking for getppid... yes
+checking for getpwuid... yes
+checking for getpwuid_r... yes
+checking for getrlimit... yes
+checking for gettimeofday... yes
+checking for if_nametoindex... yes
+checking for mach_absolute_time... no
+checking deeper for mach_absolute_time... but still no
+checking for pipe... yes
+checking for setlocale... yes
+checking for setmode... no
+checking deeper for setmode... but still no
+checking for setrlimit... yes
+checking for usleep... yes
+checking for utime... yes
+checking for utimes... yes
+checking how to set a socket into non-blocking mode... fcntl O_NONBLOCK
+checking for perl... /usr/bin/perl
+checking for gnroff... no
+checking for nroff... no
+[91mconfigure: WARNING: disabling built-in manual
+[0mchecking whether to enable the threaded resolver... yes
+checking whether to use POSIX threads for threaded resolver... auto
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_create... yes
+checking convert -I options to -isystem... yes
+checking whether to enable verbose strings... yes
+checking whether to enable SSPI support (Windows native builds only)... no
+checking whether to enable cryptographic authentication methods... yes
+checking whether to enable NTLM delegation to winbind's helper... yes
+checking whether to enable TLS-SRP authentication... yes
+checking whether to enable Unix domain sockets... auto
+checking for struct sockaddr_un.sun_path... yes
+checking whether to support cookies... yes
+checking whether to support socketpair... yes
+checking whether to support HTTP authentication... yes
+checking whether to support DoH... yes
+checking whether to support the MIME API... yes
+checking whether to support date parsing... yes
+checking whether to support netrc parsing... yes
+checking whether to support progress-meter... yes
+checking whether to support DNS shuffling... yes
+checking whether to support curl_easy_option*... yes
+checking whether to support alt-svc... no
+checking whether hiding of library internal symbols will actually happen... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/examples/Makefile
+config.status: creating docs/libcurl/Makefile
+config.status: creating docs/libcurl/opts/Makefile
+config.status: creating docs/cmdline-opts/Makefile
+config.status: creating include/Makefile
+config.status: creating include/curl/Makefile
+config.status: creating src/Makefile
+config.status: creating lib/Makefile
+config.status: creating scripts/Makefile
+config.status: creating lib/libcurl.vers
+config.status: creating tests/Makefile
+config.status: creating tests/certs/Makefile
+config.status: creating tests/certs/scripts/Makefile
+config.status: creating tests/data/Makefile
+config.status: creating tests/server/Makefile
+config.status: creating tests/libtest/Makefile
+config.status: creating tests/unit/Makefile
+config.status: creating packages/Makefile
+config.status: creating packages/vms/Makefile
+config.status: creating curl-config
+config.status: creating libcurl.pc
+config.status: creating lib/curl_config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: amending lib/Makefile
+configure: amending src/Makefile
+configure: amending tests/unit/Makefile
+configure: amending tests/server/Makefile
+configure: amending tests/libtest/Makefile
+configure: amending docs/examples/Makefile
+configure: Configured to build curl/libcurl:
+
+  Host setup:       x86_64-pc-linux-musl
+  Install prefix:   /usr/local
+  Compiler:         gcc
+   CFLAGS:          -Werror-implicit-function-declaration -O2 -Wno-system-headers
+   CPPFLAGS:        
+   LDFLAGS:         
+   LIBS:            -lssl -lcrypto -lssl -lcrypto
+
+  curl version:     7.73.0-DEV
+  SSL:              enabled (OpenSSL)
+  SSH:              no      (--with-{libssh,libssh2})
+  zlib:             no      (--with-zlib)
+  brotli:           no      (--with-brotli)
+  zstd:             no      (--with-zstd)
+  GSS-API:          no      (--with-gssapi)
+  TLS-SRP:          enabled
+  resolver:         POSIX threaded
+  IPv6:             enabled
+  Unix sockets:     enabled
+  IDN:              no      (--with-{libidn2,winidn})
+  Build libcurl:    Shared=yes, Static=yes
+  Built-in manual:  no      (--enable-manual)
+  --libcurl option: enabled (--disable-libcurl-option)
+  Verbose errors:   enabled (--disable-verbose)
+  Code coverage:    disabled
+  SSPI:             no      (--enable-sspi)
+  ca cert bundle:   /etc/ssl/certs/ca-certificates.crt
+  ca cert path:     no
+  ca fallback:      no
+  LDAP:             no      (--enable-ldap / --with-ldap-lib / --with-lber-lib)
+  LDAPS:            no      (--enable-ldaps)
+  RTSP:             enabled
+  RTMP:             no      (--with-librtmp)
+  Metalink:         no      (--with-libmetalink)
+  PSL:              no      (libpsl not found)
+  Alt-svc:          no      (--enable-alt-svc)
+  HTTP2:            no      (--with-nghttp2)
+  HTTP3:            no      (--with-ngtcp2, --with-quiche)
+  ECH:              no      (--enable-ech)
+  Protocols:        DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS MQTT POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+  Features:         AsynchDNS HTTPS-proxy IPv6 NTLM NTLM_WB SSL TLS-SRP UnixSockets
+
+total 4M     
+drwxr-xr-x    1 root     root        4.0K Oct  3 12:56 ..
+drwxr-xr-x    2 root     root        4.0K Oct  3 12:59 winbuild
+drwxr-xr-x    3 root     root        4.0K Oct  3 12:59 projects
+drwxr-xr-x    5 root     root        4.0K Oct  3 12:59 plan9
+-rwxr-xr-x    1 root     root        5.9K Oct  3 12:59 maketgz
+-rw-r--r--    1 root     root        1.5K Oct  3 12:59 libcurl.pc.in
+-rw-r--r--    1 root     root        5.2K Oct  3 12:59 curl-config.in
+-rwxr-xr-x    1 root     root      153.2K Oct  3 12:59 configure.ac
+-rw-r--r--    1 root     root        7.5K Oct  3 12:59 buildconf.bat
+-rwxr-xr-x    1 root     root         124 Oct  3 12:59 buildconf
+-rw-r--r--    1 root     root       10.6K Oct  3 12:59 appveyor.yml
+-rw-r--r--    1 root     root       65.4K Oct  3 12:59 acinclude.m4
+-rw-r--r--    1 root     root         370 Oct  3 12:59 SECURITY.md
+-rw-r--r--    1 root     root       13.9K Oct  3 12:59 RELEASE-NOTES
+-rw-r--r--    1 root     root        5.0K Oct  3 12:59 README.md
+-rw-r--r--    1 root     root        1.6K Oct  3 12:59 README
+-rw-r--r--    1 root     root        2.8K Oct  3 12:59 Makefile.dist
+-rw-r--r--    1 root     root       28.5K Oct  3 12:59 Makefile.am
+-rwxr-xr-x    1 root     root        6.1K Oct  3 12:59 MacOSX-Framework
+-rw-r--r--    1 root     root        1.3K Oct  3 12:59 GIT-INFO
+-rw-r--r--    1 root     root        1.1K Oct  3 12:59 COPYING
+-rw-r--r--    1 root     root       56.5K Oct  3 12:59 CMakeLists.txt
+drwxr-xr-x    3 root     root        4.0K Oct  3 12:59 CMake
+-rw-r--r--    1 root     root         322 Oct  3 12:59 CHANGES
+-rw-r--r--    1 root     root       10.8K Oct  3 12:59 .travis.yml
+drwxr-xr-x    2 root     root        4.0K Oct  3 12:59 .muse
+-rw-r--r--    1 root     root        3.4K Oct  3 12:59 .mailmap
+-rw-r--r--    1 root     root        1.4K Oct  3 12:59 .lgtm.yml
+-rw-r--r--    1 root     root         594 Oct  3 12:59 .gitignore
+drwxr-xr-x    4 root     root        4.0K Oct  3 12:59 .github
+-rw-r--r--    1 root     root         129 Oct  3 12:59 .gitattributes
+drwxr-xr-x    8 root     root        4.0K Oct  3 12:59 .git
+-rw-r--r--    1 root     root        1.3K Oct  3 12:59 .dir-locals.el
+-rw-r--r--    1 root     root          34 Oct  3 12:59 .dcignore
+-rw-r--r--    1 root     root        3.3K Oct  3 12:59 .cirrus.yml
+-rw-r--r--    1 root     root        8.8K Oct  3 12:59 .azure-pipelines.yml
+drwxr-xr-x    2 root     root        4.0K Oct  3 12:59 m4
+-rw-r--r--    1 root     root      316.7K Oct  3 12:59 ltmain.sh
+-rw-r--r--    1 root     root       43.3K Oct  3 12:59 aclocal.m4
+-rwxr-xr-x    1 root     root        1.2M Oct  3 12:59 configure
+-rwxr-xr-x    1 root     root        4.5K Oct  3 12:59 test-driver
+-rwxr-xr-x    1 root     root        6.7K Oct  3 12:59 missing
+-rwxr-xr-x    1 root     root       15.3K Oct  3 12:59 install-sh
+-rwxr-xr-x    1 root     root       30.9K Oct  3 12:59 config.sub
+-rwxr-xr-x    1 root     root       47.3K Oct  3 12:59 config.guess
+-rwxr-xr-x    1 root     root        7.2K Oct  3 12:59 compile
+drwxr-xr-x    2 root     root        4.0K Oct  3 12:59 autom4te.cache
+-rw-r--r--    1 root     root       70.0K Oct  3 12:59 Makefile.in
+-rwxr-xr-x    1 root     root       23.0K Oct  3 12:59 depcomp
+-rwxr-xr-x    1 root     root       68.4K Oct  3 12:59 config.status
+drwxr-xr-x    3 root     root        4.0K Oct  3 12:59 scripts
+drwxr-xr-x    7 root     root        4.0K Oct  3 12:59 packages
+-rw-r--r--    1 root     root        1.6K Oct  3 12:59 libcurl.pc
+drwxr-xr-x    3 root     root        4.0K Oct  3 12:59 include
+drwxr-xr-x    5 root     root        4.0K Oct  3 12:59 docs
+-rw-r--r--    1 root     root        5.4K Oct  3 12:59 curl-config
+-rw-r--r--    1 root     root       68.7K Oct  3 12:59 Makefile
+drwxr-xr-x    8 root     root        4.0K Oct  3 12:59 tests
+drwxr-xr-x    4 root     root        4.0K Oct  3 12:59 src
+-rwxr-xr-x    1 root     root      331.4K Oct  3 12:59 libtool
+drwxr-xr-x    7 root     root       12.0K Oct  3 12:59 lib
+-rw-r--r--    1 root     root        1.4M Oct  3 12:59 config.log
+drwxr-xr-x   18 root     root        4.0K Oct  3 12:59 .
+Making all in lib
+make[1]: Entering directory '/curl/lib'
+make  all-am
+make[2]: Entering directory '/curl/lib'
+  CC       libcurl_la-altsvc.lo
+  CC       libcurl_la-amigaos.lo
+  CC       libcurl_la-asyn-ares.lo
+  CC       libcurl_la-asyn-thread.lo
+  CC       libcurl_la-base64.lo
+  CC       libcurl_la-conncache.lo
+  CC       libcurl_la-connect.lo
+  CC       libcurl_la-content_encoding.lo
+  CC       libcurl_la-cookie.lo
+  CC       libcurl_la-curl_addrinfo.lo
+  CC       libcurl_la-curl_ctype.lo
+  CC       libcurl_la-curl_des.lo
+  CC       libcurl_la-curl_endian.lo
+  CC       libcurl_la-curl_fnmatch.lo
+  CC       libcurl_la-curl_get_line.lo
+  CC       libcurl_la-curl_gethostname.lo
+  CC       libcurl_la-curl_gssapi.lo
+  CC       libcurl_la-curl_memrchr.lo
+  CC       libcurl_la-curl_multibyte.lo
+  CC       libcurl_la-curl_ntlm_core.lo
+  CC       libcurl_la-curl_ntlm_wb.lo
+  CC       libcurl_la-curl_path.lo
+  CC       libcurl_la-curl_range.lo
+  CC       libcurl_la-curl_rtmp.lo
+  CC       libcurl_la-curl_sasl.lo
+  CC       libcurl_la-curl_sspi.lo
+  CC       libcurl_la-curl_threads.lo
+  CC       libcurl_la-dict.lo
+  CC       libcurl_la-dotdot.lo
+  CC       libcurl_la-easy.lo
+  CC       libcurl_la-escape.lo
+  CC       libcurl_la-file.lo
+  CC       libcurl_la-fileinfo.lo
+  CC       libcurl_la-formdata.lo
+  CC       libcurl_la-ftp.lo
+  CC       libcurl_la-url.lo
+  CC       libcurl_la-ftplistparser.lo
+  CC       libcurl_la-getenv.lo
+  CC       libcurl_la-getinfo.lo
+  CC       libcurl_la-gopher.lo
+  CC       libcurl_la-hash.lo
+  CC       libcurl_la-hostasyn.lo
+  CC       libcurl_la-hmac.lo
+  CC       libcurl_la-hostcheck.lo
+  CC       libcurl_la-hostip.lo
+  CC       libcurl_la-hostip4.lo
+  CC       libcurl_la-hostip6.lo
+  CC       libcurl_la-hostsyn.lo
+  CC       libcurl_la-http.lo
+  CC       libcurl_la-http2.lo
+  CC       libcurl_la-http_chunks.lo
+  CC       libcurl_la-http_digest.lo
+  CC       libcurl_la-http_negotiate.lo
+  CC       libcurl_la-http_ntlm.lo
+  CC       libcurl_la-http_proxy.lo
+  CC       libcurl_la-idn_win32.lo
+  CC       libcurl_la-if2ip.lo
+  CC       libcurl_la-imap.lo
+  CC       libcurl_la-inet_ntop.lo
+  CC       libcurl_la-inet_pton.lo
+  CC       libcurl_la-krb5.lo
+  CC       libcurl_la-ldap.lo
+  CC       libcurl_la-llist.lo
+  CC       libcurl_la-md4.lo
+  CC       libcurl_la-md5.lo
+  CC       libcurl_la-memdebug.lo
+  CC       libcurl_la-mime.lo
+  CC       libcurl_la-mprintf.lo
+  CC       libcurl_la-mqtt.lo
+  CC       libcurl_la-multi.lo
+  CC       libcurl_la-netrc.lo
+  CC       libcurl_la-non-ascii.lo
+  CC       libcurl_la-nonblock.lo
+  CC       libcurl_la-openldap.lo
+  CC       libcurl_la-parsedate.lo
+  CC       libcurl_la-pingpong.lo
+  CC       libcurl_la-pop3.lo
+  CC       libcurl_la-progress.lo
+  CC       libcurl_la-psl.lo
+  CC       libcurl_la-doh.lo
+  CC       libcurl_la-rand.lo
+  CC       libcurl_la-rename.lo
+  CC       libcurl_la-rtsp.lo
+  CC       libcurl_la-select.lo
+  CC       libcurl_la-sendf.lo
+  CC       libcurl_la-setopt.lo
+  CC       libcurl_la-sha256.lo
+  CC       libcurl_la-share.lo
+  CC       libcurl_la-slist.lo
+  CC       libcurl_la-smb.lo
+  CC       libcurl_la-smtp.lo
+  CC       libcurl_la-socketpair.lo
+  CC       libcurl_la-socks.lo
+  CC       libcurl_la-socks_gssapi.lo
+  CC       libcurl_la-socks_sspi.lo
+  CC       libcurl_la-speedcheck.lo
+  CC       libcurl_la-splay.lo
+  CC       libcurl_la-strcase.lo
+  CC       libcurl_la-strdup.lo
+  CC       libcurl_la-strerror.lo
+  CC       libcurl_la-strtok.lo
+  CC       libcurl_la-strtoofft.lo
+  CC       libcurl_la-system_win32.lo
+  CC       libcurl_la-telnet.lo
+  CC       libcurl_la-tftp.lo
+  CC       libcurl_la-timeval.lo
+  CC       libcurl_la-transfer.lo
+  CC       libcurl_la-urlapi.lo
+  CC       libcurl_la-version.lo
+  CC       libcurl_la-warnless.lo
+  CC       libcurl_la-wildcard.lo
+  CC       libcurl_la-x509asn1.lo
+  CC       libcurl_la-dynbuf.lo
+  CC       libcurl_la-version_win32.lo
+  CC       libcurl_la-easyoptions.lo
+  CC       libcurl_la-easygetopt.lo
+  CC       vauth/libcurl_la-cleartext.lo
+  CC       vauth/libcurl_la-cram.lo
+  CC       vauth/libcurl_la-digest.lo
+  CC       vauth/libcurl_la-digest_sspi.lo
+  CC       vauth/libcurl_la-krb5_gssapi.lo
+  CC       vauth/libcurl_la-krb5_sspi.lo
+  CC       vauth/libcurl_la-ntlm.lo
+  CC       vauth/libcurl_la-ntlm_sspi.lo
+  CC       vauth/libcurl_la-oauth2.lo
+  CC       vauth/libcurl_la-spnego_gssapi.lo
+  CC       vauth/libcurl_la-spnego_sspi.lo
+  CC       vauth/libcurl_la-vauth.lo
+  CC       vtls/libcurl_la-bearssl.lo
+  CC       vtls/libcurl_la-gskit.lo
+  CC       vtls/libcurl_la-gtls.lo
+  CC       vtls/libcurl_la-keylog.lo
+  CC       vtls/libcurl_la-mbedtls.lo
+  CC       vtls/libcurl_la-mbedtls_threadlock.lo
+  CC       vtls/libcurl_la-mesalink.lo
+  CC       vtls/libcurl_la-nss.lo
+  CC       vtls/libcurl_la-openssl.lo
+  CC       vtls/libcurl_la-schannel.lo
+  CC       vtls/libcurl_la-schannel_verify.lo
+  CC       vtls/libcurl_la-sectransp.lo
+  CC       vtls/libcurl_la-vtls.lo
+  CC       vtls/libcurl_la-wolfssl.lo
+  CC       vquic/libcurl_la-ngtcp2.lo
+  CC       vquic/libcurl_la-quiche.lo
+  CC       vquic/libcurl_la-vquic.lo
+  CC       vssh/libcurl_la-libssh.lo
+  CC       vssh/libcurl_la-libssh2.lo
+  CC       vssh/libcurl_la-wolfssh.lo
+  CCLD     libcurl.la
+make[2]: Leaving directory '/curl/lib'
+make[1]: Leaving directory '/curl/lib'
+Making all in src
+make[1]: Entering directory '/curl/src'
+Making all in ../docs
+make[2]: Entering directory '/curl/docs'
+Making all in .
+make[3]: Entering directory '/curl/docs'
+if test "..x" != "..x" -a -e "./curl.1"; then \
+	/usr/bin/install -c -m 644 "./curl.1" /curl/docs/curl.1; fi
+cd cmdline-opts && make
+make[4]: Entering directory '/curl/docs/cmdline-opts'
+generate ../../docs/curl.1
+make[4]: Leaving directory '/curl/docs/cmdline-opts'
+make[3]: Leaving directory '/curl/docs'
+Making all in cmdline-opts
+make[3]: Entering directory '/curl/docs/cmdline-opts'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/curl/docs/cmdline-opts'
+make[2]: Leaving directory '/curl/docs'
+make[2]: Entering directory '/curl/src'
+  CC       curl-slist_wc.o
+  CC       curl-tool_binmode.o
+  CC       curl-tool_bname.o
+  CC       curl-tool_cb_dbg.o
+  CC       curl-tool_cb_hdr.o
+  CC       curl-tool_cb_prg.o
+  CC       curl-tool_cb_rea.o
+  CC       curl-tool_cb_see.o
+  CC       curl-tool_cb_wrt.o
+  CC       curl-tool_cfgable.o
+  CC       curl-tool_convert.o
+  CC       curl-tool_dirhie.o
+  CC       curl-tool_doswin.o
+  CC       curl-tool_easysrc.o
+  CC       curl-tool_filetime.o
+  CC       curl-tool_formparse.o
+  CC       curl-tool_getparam.o
+  CC       curl-tool_getpass.o
+  CC       curl-tool_help.o
+  CC       curl-tool_helpers.o
+  CC       curl-tool_homedir.o
+  HUGE     tool_hugehelp.c
+  CC       curl-tool_libinfo.o
+  CC       curl-tool_main.o
+  CC       curl-tool_metalink.o
+  CC       curl-tool_msgs.o
+  CC       curl-tool_operate.o
+  CC       curl-tool_operhlp.o
+  CC       curl-tool_panykey.o
+  CC       curl-tool_paramhlp.o
+  CC       curl-tool_parsecfg.o
+  CC       curl-tool_progress.o
+  CC       curl-tool_strdup.o
+  CC       curl-tool_setopt.o
+  CC       curl-tool_sleep.o
+  CC       curl-tool_urlglob.o
+  CC       curl-tool_util.o
+  CC       curl-tool_vms.o
+  CC       curl-tool_writeout.o
+  CC       curl-tool_writeout_json.o
+  CC       curl-tool_xattr.o
+  CC       curl-tool_hugehelp.o
+  CC       ../lib/curl-strtoofft.o
+  CC       ../lib/curl-nonblock.o
+  CC       ../lib/curl-warnless.o
+  CC       ../lib/curl-curl_ctype.o
+  CC       ../lib/curl-curl_multibyte.o
+  CC       ../lib/curl-version_win32.o
+  CC       ../lib/curl-dynbuf.o
+  CCLD     curl
+make[2]: Leaving directory '/curl/src'
+make[1]: Leaving directory '/curl/src'
+make[1]: Entering directory '/curl'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/curl'
+Making install in lib
+make[1]: Entering directory '/curl/lib'
+make[2]: Entering directory '/curl/lib'
+make[2]: Nothing to be done for 'install-data-am'.
+ .././install-sh -c -d '/usr/local/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libcurl.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libcurl.so.4.7.0 /usr/local/lib/libcurl.so.4.7.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libcurl.so.4.7.0 libcurl.so.4 || { rm -f libcurl.so.4 && ln -s libcurl.so.4.7.0 libcurl.so.4; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libcurl.so.4.7.0 libcurl.so || { rm -f libcurl.so && ln -s libcurl.so.4.7.0 libcurl.so; }; })
+libtool: install: /usr/bin/install -c .libs/libcurl.lai /usr/local/lib/libcurl.la
+libtool: install: /usr/bin/install -c .libs/libcurl.a /usr/local/lib/libcurl.a
+libtool: install: chmod 644 /usr/local/lib/libcurl.a
+libtool: install: ranlib /usr/local/lib/libcurl.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Leaving directory '/curl/lib'
+make[1]: Leaving directory '/curl/lib'
+Making install in src
+make[1]: Entering directory '/curl/src'
+Making install in ../docs
+make[2]: Entering directory '/curl/docs'
+Making install in .
+make[3]: Entering directory '/curl/docs'
+make[4]: Entering directory '/curl/docs'
+make[4]: Nothing to be done for 'install-exec-am'.
+ .././install-sh -c -d '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 curl-config.1 /curl/docs/curl.1 '/usr/local/share/man/man1'
+make[4]: Leaving directory '/curl/docs'
+make[3]: Leaving directory '/curl/docs'
+Making install in cmdline-opts
+make[3]: Entering directory '/curl/docs/cmdline-opts'
+make[4]: Entering directory '/curl/docs/cmdline-opts'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/curl/docs/cmdline-opts'
+make[3]: Leaving directory '/curl/docs/cmdline-opts'
+make[2]: Leaving directory '/curl/docs'
+make[2]: Entering directory '/curl/src'
+make[3]: Entering directory '/curl/src'
+make[3]: Nothing to be done for 'install-data-am'.
+ .././install-sh -c -d '/usr/local/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c curl '/usr/local/bin'
+libtool: install: /usr/bin/install -c .libs/curl /usr/local/bin/curl
+make[3]: Leaving directory '/curl/src'
+make[2]: Leaving directory '/curl/src'
+make[1]: Leaving directory '/curl/src'
+make[1]: Entering directory '/curl'
+make[2]: Entering directory '/curl'
+ ./install-sh -c -d '/usr/local/bin'
+ ./install-sh -c -d '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c curl-config '/usr/local/bin'
+ /usr/bin/install -c -m 644 libcurl.pc '/usr/local/lib/pkgconfig'
+make  install-data-hook
+make[3]: Entering directory '/curl'
+(cd include && make install)
+make[4]: Entering directory '/curl/include'
+Making install in curl
+make[5]: Entering directory '/curl/include/curl'
+make[6]: Entering directory '/curl/include/curl'
+make[6]: Nothing to be done for 'install-exec-am'.
+ ../.././install-sh -c -d '/usr/local/include/curl'
+ /usr/bin/install -c -m 644 curl.h curlver.h easy.h mprintf.h stdcheaders.h multi.h typecheck-gcc.h system.h urlapi.h options.h '/usr/local/include/curl'
+make[6]: Leaving directory '/curl/include/curl'
+make[5]: Leaving directory '/curl/include/curl'
+make[5]: Entering directory '/curl/include'
+make[6]: Entering directory '/curl/include'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Nothing to be done for 'install-data-am'.
+make[6]: Leaving directory '/curl/include'
+make[5]: Leaving directory '/curl/include'
+make[4]: Leaving directory '/curl/include'
+(cd docs && make install)
+make[4]: Entering directory '/curl/docs'
+Making install in .
+make[5]: Entering directory '/curl/docs'
+make[6]: Entering directory '/curl/docs'
+make[6]: Nothing to be done for 'install-exec-am'.
+ .././install-sh -c -d '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 curl-config.1 /curl/docs/curl.1 '/usr/local/share/man/man1'
+make[6]: Leaving directory '/curl/docs'
+make[5]: Leaving directory '/curl/docs'
+Making install in cmdline-opts
+make[5]: Entering directory '/curl/docs/cmdline-opts'
+make[6]: Entering directory '/curl/docs/cmdline-opts'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Nothing to be done for 'install-data-am'.
+make[6]: Leaving directory '/curl/docs/cmdline-opts'
+make[5]: Leaving directory '/curl/docs/cmdline-opts'
+make[4]: Leaving directory '/curl/docs'
+(cd docs/libcurl && make install)
+make[4]: Entering directory '/curl/docs/libcurl'
+Making install in opts
+make[5]: Entering directory '/curl/docs/libcurl/opts'
+make[6]: Entering directory '/curl/docs/libcurl/opts'
+make[6]: Nothing to be done for 'install-exec-am'.
+ ../../.././install-sh -c -d '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLINFO_ACTIVESOCKET.3 CURLINFO_APPCONNECT_TIME.3 CURLINFO_APPCONNECT_TIME_T.3 CURLINFO_CERTINFO.3 CURLINFO_CONDITION_UNMET.3 CURLINFO_CONNECT_TIME.3 CURLINFO_CONNECT_TIME_T.3 CURLINFO_CONTENT_LENGTH_DOWNLOAD.3 CURLINFO_CONTENT_LENGTH_DOWNLOAD_T.3 CURLINFO_CONTENT_LENGTH_UPLOAD.3 CURLINFO_CONTENT_LENGTH_UPLOAD_T.3 CURLINFO_CONTENT_TYPE.3 CURLINFO_COOKIELIST.3 CURLINFO_EFFECTIVE_METHOD.3 CURLINFO_EFFECTIVE_URL.3 CURLINFO_FILETIME.3 CURLINFO_FILETIME_T.3 CURLINFO_FTP_ENTRY_PATH.3 CURLINFO_HEADER_SIZE.3 CURLINFO_HTTPAUTH_AVAIL.3 CURLINFO_HTTP_CONNECTCODE.3 CURLINFO_HTTP_VERSION.3 CURLINFO_LASTSOCKET.3 CURLINFO_LOCAL_IP.3 CURLINFO_LOCAL_PORT.3 CURLINFO_NAMELOOKUP_TIME.3 CURLINFO_NAMELOOKUP_TIME_T.3 CURLINFO_NUM_CONNECTS.3 CURLINFO_OS_ERRNO.3 CURLINFO_PRETRANSFER_TIME.3 CURLINFO_PRETRANSFER_TIME_T.3 CURLINFO_PRIMARY_IP.3 CURLINFO_PRIMARY_PORT.3 CURLINFO_PRIVATE.3 CURLINFO_PROTOCOL.3 CURLINFO_PROXY_ERROR.3 CURLINFO_PROXY_SSL_VERIFYRESULT.3 CURLINFO_PROXYAUTH_AVAIL.3 CURLINFO_REDIRECT_COUNT.3 CURLINFO_REDIRECT_TIME.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLINFO_REDIRECT_TIME_T.3 CURLINFO_REDIRECT_URL.3 CURLINFO_REQUEST_SIZE.3 CURLINFO_RESPONSE_CODE.3 CURLINFO_RETRY_AFTER.3 CURLINFO_RTSP_CLIENT_CSEQ.3 CURLINFO_RTSP_CSEQ_RECV.3 CURLINFO_RTSP_SERVER_CSEQ.3 CURLINFO_RTSP_SESSION_ID.3 CURLINFO_SCHEME.3 CURLINFO_SIZE_DOWNLOAD.3 CURLINFO_SIZE_DOWNLOAD_T.3 CURLINFO_SIZE_UPLOAD.3 CURLINFO_SIZE_UPLOAD_T.3 CURLINFO_SPEED_DOWNLOAD.3 CURLINFO_SPEED_DOWNLOAD_T.3 CURLINFO_SPEED_UPLOAD.3 CURLINFO_SPEED_UPLOAD_T.3 CURLINFO_SSL_ENGINES.3 CURLINFO_SSL_VERIFYRESULT.3 CURLINFO_STARTTRANSFER_TIME.3 CURLINFO_STARTTRANSFER_TIME_T.3 CURLINFO_TLS_SESSION.3 CURLINFO_TLS_SSL_PTR.3 CURLINFO_TOTAL_TIME.3 CURLINFO_TOTAL_TIME_T.3 CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE.3 CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE.3 CURLMOPT_MAXCONNECTS.3 CURLMOPT_MAX_CONCURRENT_STREAMS.3 CURLMOPT_MAX_HOST_CONNECTIONS.3 CURLMOPT_MAX_PIPELINE_LENGTH.3 CURLMOPT_MAX_TOTAL_CONNECTIONS.3 CURLMOPT_PIPELINING.3 CURLMOPT_PIPELINING_SERVER_BL.3 CURLMOPT_PIPELINING_SITE_BL.3 CURLMOPT_PUSHDATA.3 CURLMOPT_PUSHFUNCTION.3 CURLMOPT_SOCKETDATA.3 CURLMOPT_SOCKETFUNCTION.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLMOPT_TIMERDATA.3 CURLMOPT_TIMERFUNCTION.3 CURLOPT_ABSTRACT_UNIX_SOCKET.3 CURLOPT_ACCEPTTIMEOUT_MS.3 CURLOPT_ACCEPT_ENCODING.3 CURLOPT_ADDRESS_SCOPE.3 CURLOPT_ALTSVC.3 CURLOPT_ALTSVC_CTRL.3 CURLOPT_APPEND.3 CURLOPT_AUTOREFERER.3 CURLOPT_BUFFERSIZE.3 CURLOPT_CAINFO.3 CURLOPT_CAPATH.3 CURLOPT_CERTINFO.3 CURLOPT_CHUNK_BGN_FUNCTION.3 CURLOPT_CHUNK_DATA.3 CURLOPT_CHUNK_END_FUNCTION.3 CURLOPT_CLOSESOCKETDATA.3 CURLOPT_CLOSESOCKETFUNCTION.3 CURLOPT_CONNECTTIMEOUT.3 CURLOPT_CONNECTTIMEOUT_MS.3 CURLOPT_CONNECT_ONLY.3 CURLOPT_CONNECT_TO.3 CURLOPT_CONV_FROM_NETWORK_FUNCTION.3 CURLOPT_CONV_FROM_UTF8_FUNCTION.3 CURLOPT_CONV_TO_NETWORK_FUNCTION.3 CURLOPT_COOKIE.3 CURLOPT_COOKIEFILE.3 CURLOPT_COOKIEJAR.3 CURLOPT_COOKIELIST.3 CURLOPT_COOKIESESSION.3 CURLOPT_COPYPOSTFIELDS.3 CURLOPT_CRLF.3 CURLOPT_CRLFILE.3 CURLOPT_CURLU.3 CURLOPT_CUSTOMREQUEST.3 CURLOPT_DEBUGDATA.3 CURLOPT_DEBUGFUNCTION.3 CURLOPT_DEFAULT_PROTOCOL.3 CURLOPT_DIRLISTONLY.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_DISALLOW_USERNAME_IN_URL.3 CURLOPT_DNS_CACHE_TIMEOUT.3 CURLOPT_DNS_INTERFACE.3 CURLOPT_DNS_LOCAL_IP4.3 CURLOPT_DNS_LOCAL_IP6.3 CURLOPT_DNS_SERVERS.3 CURLOPT_DNS_SHUFFLE_ADDRESSES.3 CURLOPT_DNS_USE_GLOBAL_CACHE.3 CURLOPT_DOH_URL.3 CURLOPT_EGDSOCKET.3 CURLOPT_ERRORBUFFER.3 CURLOPT_EXPECT_100_TIMEOUT_MS.3 CURLOPT_FAILONERROR.3 CURLOPT_FILETIME.3 CURLOPT_FNMATCH_DATA.3 CURLOPT_FNMATCH_FUNCTION.3 CURLOPT_FOLLOWLOCATION.3 CURLOPT_FORBID_REUSE.3 CURLOPT_FRESH_CONNECT.3 CURLOPT_FTPPORT.3 CURLOPT_FTPSSLAUTH.3 CURLOPT_FTP_ACCOUNT.3 CURLOPT_FTP_ALTERNATIVE_TO_USER.3 CURLOPT_FTP_CREATE_MISSING_DIRS.3 CURLOPT_FTP_FILEMETHOD.3 CURLOPT_FTP_RESPONSE_TIMEOUT.3 CURLOPT_FTP_SKIP_PASV_IP.3 CURLOPT_FTP_SSL_CCC.3 CURLOPT_FTP_USE_EPRT.3 CURLOPT_FTP_USE_EPSV.3 CURLOPT_FTP_USE_PRET.3 CURLOPT_GSSAPI_DELEGATION.3 CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS.3 CURLOPT_HAPROXYPROTOCOL.3 CURLOPT_HEADER.3 CURLOPT_HEADERDATA.3 CURLOPT_HEADERFUNCTION.3 CURLOPT_HEADEROPT.3 CURLOPT_HTTP09_ALLOWED.3 CURLOPT_HTTP200ALIASES.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_HTTPAUTH.3 CURLOPT_HTTPGET.3 CURLOPT_HTTPHEADER.3 CURLOPT_HTTPPOST.3 CURLOPT_HTTPPROXYTUNNEL.3 CURLOPT_HTTP_CONTENT_DECODING.3 CURLOPT_HTTP_TRANSFER_DECODING.3 CURLOPT_HTTP_VERSION.3 CURLOPT_IGNORE_CONTENT_LENGTH.3 CURLOPT_INFILESIZE.3 CURLOPT_INFILESIZE_LARGE.3 CURLOPT_INTERFACE.3 CURLOPT_INTERLEAVEDATA.3 CURLOPT_INTERLEAVEFUNCTION.3 CURLOPT_IOCTLDATA.3 CURLOPT_IOCTLFUNCTION.3 CURLOPT_IPRESOLVE.3 CURLOPT_ISSUERCERT.3 CURLOPT_ISSUERCERT_BLOB.3 CURLOPT_KEEP_SENDING_ON_ERROR.3 CURLOPT_KEYPASSWD.3 CURLOPT_KRBLEVEL.3 CURLOPT_LOCALPORT.3 CURLOPT_LOCALPORTRANGE.3 CURLOPT_LOGIN_OPTIONS.3 CURLOPT_LOW_SPEED_LIMIT.3 CURLOPT_LOW_SPEED_TIME.3 CURLOPT_MAIL_AUTH.3 CURLOPT_MAIL_FROM.3 CURLOPT_MAIL_RCPT.3 CURLOPT_MAIL_RCPT_ALLLOWFAILS.3 CURLOPT_MAXAGE_CONN.3 CURLOPT_MAXCONNECTS.3 CURLOPT_MAXFILESIZE.3 CURLOPT_MAXFILESIZE_LARGE.3 CURLOPT_MAXREDIRS.3 CURLOPT_MAX_RECV_SPEED_LARGE.3 CURLOPT_MAX_SEND_SPEED_LARGE.3 CURLOPT_MIMEPOST.3 CURLOPT_NETRC.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_NETRC_FILE.3 CURLOPT_NEW_DIRECTORY_PERMS.3 CURLOPT_NEW_FILE_PERMS.3 CURLOPT_NOBODY.3 CURLOPT_NOPROGRESS.3 CURLOPT_NOPROXY.3 CURLOPT_NOSIGNAL.3 CURLOPT_OPENSOCKETDATA.3 CURLOPT_OPENSOCKETFUNCTION.3 CURLOPT_PASSWORD.3 CURLOPT_PATH_AS_IS.3 CURLOPT_PINNEDPUBLICKEY.3 CURLOPT_PIPEWAIT.3 CURLOPT_PORT.3 CURLOPT_POST.3 CURLOPT_POSTFIELDS.3 CURLOPT_POSTFIELDSIZE.3 CURLOPT_POSTFIELDSIZE_LARGE.3 CURLOPT_POSTQUOTE.3 CURLOPT_POSTREDIR.3 CURLOPT_PREQUOTE.3 CURLOPT_PRE_PROXY.3 CURLOPT_PRIVATE.3 CURLOPT_PROGRESSDATA.3 CURLOPT_PROGRESSFUNCTION.3 CURLOPT_PROTOCOLS.3 CURLOPT_PROXY.3 CURLOPT_PROXYAUTH.3 CURLOPT_PROXYHEADER.3 CURLOPT_PROXYPASSWORD.3 CURLOPT_PROXYPORT.3 CURLOPT_PROXYTYPE.3 CURLOPT_PROXYUSERNAME.3 CURLOPT_PROXYUSERPWD.3 CURLOPT_PROXY_CAINFO.3 CURLOPT_PROXY_CAPATH.3 CURLOPT_PROXY_CRLFILE.3 CURLOPT_PROXY_KEYPASSWD.3 CURLOPT_PROXY_ISSUERCERT.3 CURLOPT_PROXY_ISSUERCERT_BLOB.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_PROXY_PINNEDPUBLICKEY.3 CURLOPT_PROXY_SERVICE_NAME.3 CURLOPT_PROXY_SSLCERT.3 CURLOPT_PROXY_SSLCERT_BLOB.3 CURLOPT_PROXY_SSLCERTTYPE.3 CURLOPT_PROXY_SSLKEY.3 CURLOPT_PROXY_SSLKEY_BLOB.3 CURLOPT_PROXY_SSLKEYTYPE.3 CURLOPT_PROXY_SSLVERSION.3 CURLOPT_PROXY_SSL_CIPHER_LIST.3 CURLOPT_PROXY_SSL_OPTIONS.3 CURLOPT_PROXY_SSL_VERIFYHOST.3 CURLOPT_PROXY_SSL_VERIFYPEER.3 CURLOPT_PROXY_TLS13_CIPHERS.3 CURLOPT_PROXY_TLSAUTH_PASSWORD.3 CURLOPT_PROXY_TLSAUTH_TYPE.3 CURLOPT_PROXY_TLSAUTH_USERNAME.3 CURLOPT_PROXY_TRANSFER_MODE.3 CURLOPT_PUT.3 CURLOPT_QUOTE.3 CURLOPT_RANDOM_FILE.3 CURLOPT_RANGE.3 CURLOPT_READDATA.3 CURLOPT_READFUNCTION.3 CURLOPT_REDIR_PROTOCOLS.3 CURLOPT_REFERER.3 CURLOPT_REQUEST_TARGET.3 CURLOPT_RESOLVE.3 CURLOPT_RESOLVER_START_DATA.3 CURLOPT_RESOLVER_START_FUNCTION.3 CURLOPT_RESUME_FROM.3 CURLOPT_RESUME_FROM_LARGE.3 CURLOPT_RTSP_CLIENT_CSEQ.3 CURLOPT_RTSP_REQUEST.3 CURLOPT_RTSP_SERVER_CSEQ.3 CURLOPT_RTSP_SESSION_ID.3 CURLOPT_RTSP_STREAM_URI.3 CURLOPT_RTSP_TRANSPORT.3 CURLOPT_SASL_AUTHZID.3 CURLOPT_SASL_IR.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_SEEKDATA.3 CURLOPT_SEEKFUNCTION.3 CURLOPT_SERVICE_NAME.3 CURLOPT_SHARE.3 CURLOPT_SOCKOPTDATA.3 CURLOPT_SOCKOPTFUNCTION.3 CURLOPT_SOCKS5_AUTH.3 CURLOPT_SOCKS5_GSSAPI_NEC.3 CURLOPT_SOCKS5_GSSAPI_SERVICE.3 CURLOPT_SSH_AUTH_TYPES.3 CURLOPT_SSH_COMPRESSION.3 CURLOPT_SSH_HOST_PUBLIC_KEY_MD5.3 CURLOPT_SSH_KEYDATA.3 CURLOPT_SSH_KEYFUNCTION.3 CURLOPT_SSH_KNOWNHOSTS.3 CURLOPT_SSH_PRIVATE_KEYFILE.3 CURLOPT_SSH_PUBLIC_KEYFILE.3 CURLOPT_SSLCERT.3 CURLOPT_SSLCERT_BLOB.3 CURLOPT_SSLCERTTYPE.3 CURLOPT_SSLENGINE.3 CURLOPT_SSLENGINE_DEFAULT.3 CURLOPT_SSLKEY.3 CURLOPT_SSLKEY_BLOB.3 CURLOPT_SSLKEYTYPE.3 CURLOPT_SSLVERSION.3 CURLOPT_SSL_CIPHER_LIST.3 CURLOPT_SSL_CTX_DATA.3 CURLOPT_SSL_CTX_FUNCTION.3 CURLOPT_SSL_EC_CURVES.3 CURLOPT_SSL_ENABLE_ALPN.3 CURLOPT_SSL_ENABLE_NPN.3 CURLOPT_SSL_FALSESTART.3 CURLOPT_SSL_OPTIONS.3 CURLOPT_SSL_SESSIONID_CACHE.3 CURLOPT_SSL_VERIFYHOST.3 CURLOPT_SSL_VERIFYPEER.3 CURLOPT_SSL_VERIFYSTATUS.3 CURLOPT_STDERR.3 CURLOPT_STREAM_DEPENDS.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_STREAM_DEPENDS_E.3 CURLOPT_STREAM_WEIGHT.3 CURLOPT_SUPPRESS_CONNECT_HEADERS.3 CURLOPT_TCP_FASTOPEN.3 CURLOPT_TCP_KEEPALIVE.3 CURLOPT_TCP_KEEPIDLE.3 CURLOPT_TCP_KEEPINTVL.3 CURLOPT_TCP_NODELAY.3 CURLOPT_TELNETOPTIONS.3 CURLOPT_TFTP_BLKSIZE.3 CURLOPT_TFTP_NO_OPTIONS.3 CURLOPT_TIMECONDITION.3 CURLOPT_TIMEOUT.3 CURLOPT_TIMEOUT_MS.3 CURLOPT_TIMEVALUE.3 CURLOPT_TIMEVALUE_LARGE.3 CURLOPT_TLS13_CIPHERS.3 CURLOPT_TLSAUTH_PASSWORD.3 CURLOPT_TLSAUTH_TYPE.3 CURLOPT_TLSAUTH_USERNAME.3 CURLOPT_TRAILERDATA.3 CURLOPT_TRAILERFUNCTION.3 CURLOPT_TRANSFERTEXT.3 CURLOPT_TRANSFER_ENCODING.3 CURLOPT_UNIX_SOCKET_PATH.3 CURLOPT_UNRESTRICTED_AUTH.3 CURLOPT_UPKEEP_INTERVAL_MS.3 CURLOPT_UPLOAD.3 CURLOPT_UPLOAD_BUFFERSIZE.3 CURLOPT_URL.3 CURLOPT_USERAGENT.3 CURLOPT_USERNAME.3 CURLOPT_USERPWD.3 CURLOPT_USE_SSL.3 CURLOPT_VERBOSE.3 CURLOPT_WILDCARDMATCH.3 CURLOPT_WRITEDATA.3 CURLOPT_WRITEFUNCTION.3 CURLOPT_XFERINFODATA.3 CURLOPT_XFERINFOFUNCTION.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 CURLOPT_XOAUTH2_BEARER.3 '/usr/local/share/man/man3'
+make[6]: Leaving directory '/curl/docs/libcurl/opts'
+make[5]: Leaving directory '/curl/docs/libcurl/opts'
+make[5]: Entering directory '/curl/docs/libcurl'
+perl ./mksymbolsmanpage.pl < ./symbols-in-versions > libcurl-symbols.3
+make[6]: Entering directory '/curl/docs/libcurl'
+make[6]: Nothing to be done for 'install-exec-am'.
+ ../.././install-sh -c -d '/usr/local/share/aclocal'
+ ../.././install-sh -c -d '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 libcurl.m4 '/usr/local/share/aclocal'
+ /usr/bin/install -c -m 644 curl_easy_cleanup.3 curl_easy_duphandle.3 curl_easy_escape.3 curl_easy_getinfo.3 curl_easy_init.3 curl_easy_option_by_id.3 curl_easy_option_by_name.3 curl_easy_option_next.3 curl_easy_pause.3 curl_easy_perform.3 curl_easy_recv.3 curl_easy_reset.3 curl_easy_send.3 curl_easy_setopt.3 curl_easy_strerror.3 curl_easy_unescape.3 curl_easy_upkeep.3 curl_escape.3 curl_formadd.3 curl_formfree.3 curl_formget.3 curl_free.3 curl_getdate.3 curl_getenv.3 curl_global_cleanup.3 curl_global_init.3 curl_global_init_mem.3 curl_global_sslset.3 curl_mime_addpart.3 curl_mime_data.3 curl_mime_data_cb.3 curl_mime_encoder.3 curl_mime_filedata.3 curl_mime_filename.3 curl_mime_free.3 curl_mime_headers.3 curl_mime_init.3 curl_mime_name.3 curl_mime_subparts.3 curl_mime_type.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 curl_mprintf.3 curl_multi_add_handle.3 curl_multi_assign.3 curl_multi_cleanup.3 curl_multi_fdset.3 curl_multi_info_read.3 curl_multi_init.3 curl_multi_perform.3 curl_multi_poll.3 curl_multi_remove_handle.3 curl_multi_setopt.3 curl_multi_socket.3 curl_multi_socket_action.3 curl_multi_socket_all.3 curl_multi_strerror.3 curl_multi_timeout.3 curl_multi_wakeup.3 curl_multi_wait.3 curl_share_cleanup.3 curl_share_init.3 curl_share_setopt.3 curl_share_strerror.3 curl_slist_append.3 curl_slist_free_all.3 curl_strequal.3 curl_strnequal.3 curl_unescape.3 curl_url.3 curl_url_cleanup.3 curl_url_dup.3 curl_url_get.3 curl_url_set.3 curl_version.3 curl_version_info.3 libcurl-easy.3 libcurl-env.3 libcurl-errors.3 libcurl-multi.3 libcurl-security.3 libcurl-share.3 '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 libcurl-symbols.3 libcurl-thread.3 libcurl-tutorial.3 libcurl-url.3 libcurl.3 '/usr/local/share/man/man3'
+make[6]: Leaving directory '/curl/docs/libcurl'
+make[5]: Leaving directory '/curl/docs/libcurl'
+make[4]: Leaving directory '/curl/docs/libcurl'
+make[3]: Leaving directory '/curl'
+make[2]: Leaving directory '/curl'
+make[1]: Leaving directory '/curl'
+Removing intermediate container fcdc7b08f3e1
+ ---> 28fa02292ade
+Step 4/4 : ENTRYPOINT ["/usr/local/bin/curl"]
+ ---> Running in ef9c1d8f7a0f
+Removing intermediate container ef9c1d8f7a0f
+ ---> db3eb7d36728
+Successfully built db3eb7d36728
+Successfully tagged blairy/curl:20201003_225412
+20201003_230025 - Build completed successfully.
+
+
+Already up to date.
