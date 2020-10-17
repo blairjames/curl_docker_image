@@ -88172,3 +88172,38 @@ Successfully tagged blairy/curl:20201017_062801
 
 
 Already up to date.
+[master 408e341] Automatic build 20201017_062801
+ 1 file changed, 35 insertions(+)
+20201017_062815 - git completed successfully.
+The push refers to repository [docker.io/blairy/curl]
+adc567d318ad: Preparing
+bf909aa0097a: Preparing
+50644c29ef5a: Preparing
+bf909aa0097a: Layer already exists
+adc567d318ad: Layer already exists
+50644c29ef5a: Layer already exists
+20201017_062801: digest: sha256:712d556b69ac3a2d7af92356c25dd7f116639ccdc9228c3f5e2f059d32d2ad7c size: 952
+20201017_062822 - Docker push completed successfully.
+
+
+20201017_062822 - All completed successfully
+20201017_192801 - Starting Build.
+
+Sending build context to Docker daemon  134.6MB
+Step 1/4 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/4 : RUN apk update && apk upgrade &&     apk add --no-cache     make automake git gdbm gdbm-dev util-linux gcc openldap openldap-clients     nghttp2 libc-dev openssl-dev libc-utils autoconf libtool rsyslog-gssapi libpsl
+ ---> Using cache
+ ---> 2ac0517b795e
+Step 3/4 : RUN git clone https://github.com/curl/curl.git &&     cd /curl && ./buildconf &&     ./configure --with-zlib -with-gssapi --enable-ldap --enable-ldaps     --with-libpsl --with-nghttp2 &&     ls -larth && make -j 8 -l 90 &&     make -j 8 -l 90 install
+ ---> Using cache
+ ---> 28fa02292ade
+Step 4/4 : ENTRYPOINT ["/usr/local/bin/curl"]
+ ---> Using cache
+ ---> db3eb7d36728
+Successfully built db3eb7d36728
+Successfully tagged blairy/curl:20201017_192801
+20201017_192803 - Build completed successfully.
+
+
+Already up to date.
