@@ -104691,3 +104691,30 @@ Successfully tagged blairy/curl:20201110_172801
 20201110_172804 - Build completed successfully.
 
 
+[master af889b8] Automatic build 20201110_172801
+ 1 file changed, 27 insertions(+)
+20201110_172804 - git completed successfully.
+The push refers to repository [docker.io/blairy/curl]
+20201110_172804 - Docker push completed successfully.
+
+
+20201110_172804 - All completed successfully
+20201110_182801 - Starting Build.
+
+Sending build context to Docker daemon  224.8MB
+Step 1/4 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/4 : RUN apk update && apk upgrade &&     apk add --no-cache     make automake git gdbm gdbm-dev util-linux gcc openldap openldap-clients     nghttp2 libc-dev openssl-dev libc-utils autoconf libtool rsyslog-gssapi libpsl
+ ---> Using cache
+ ---> a530b8560613
+Step 3/4 : RUN git clone https://github.com/curl/curl.git &&     cd /curl && ./buildconf &&     ./configure --with-zlib -with-gssapi --enable-ldap --enable-ldaps     --with-libpsl --with-nghttp2 &&     ls -larth && make -j 8 -l 90 &&     make -j 8 -l 90 install
+ ---> Using cache
+ ---> c246f79d301e
+Step 4/4 : ENTRYPOINT ["/usr/local/bin/curl"]
+ ---> Using cache
+ ---> f38b6d8bade7
+Successfully built f38b6d8bade7
+Successfully tagged blairy/curl:20201110_182801
+20201110_182805 - Build completed successfully.
+
+
