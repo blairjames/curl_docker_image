@@ -27,7 +27,7 @@ timestp=$(timestamp)
 logger "Starting Build.\n"
 
 # Build the image using timestamp as tag.
-if /usr/bin/docker build /home/docker/curl_docker_image -t docker.io/blairy/curl:$timestp | tee -a $log; then
+if /usr/bin/docker build /home/docker/curl_docker_image -t docker.io/blairy/curl:$timestp --no-cache --rm --pull | tee -a $log; then
     logger "Build completed successfully.\n\n"
 else
     logger "Build FAILED!! Aborting.\n\n"
