@@ -61,7 +61,7 @@ else
 fi
 
 # Prune
-cd /home/docker/curl_docker_image && /usr/bin/git gc --prune --aggressive --force
+cd /home/docker/curl_docker_image && /usr/bin/git gc --prune
 
 # All completed successfully
 logger "All completed successfully"
